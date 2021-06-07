@@ -1,0 +1,106 @@
+@tailwind base;
+
+html {
+  @apply text-gray-900;
+  font-size: 0.875em;
+}
+
+*:focus, button:focus {
+  outline-style: solid;
+  outline-color: #000;
+}
+
+@screen dark-mode {
+  html {
+    @apply text-gray-300 bg-dark-mode;
+  }
+  *:focus, button:focus {
+    outline-color: #fff;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 1em;
+  }
+}
+
+h1 {
+  @apply text-5xl font-medium;
+  @screen sm {
+    @apply text-6xl;
+  }
+}
+
+h2 {
+  @apply text-5xl;
+}
+
+h3 {
+  @apply text-4xl;
+}
+
+h4 {
+  @apply text-xl;
+}
+
+p {
+  @apply mb-4 text-xl font-normal;
+}
+
+li {
+  @apply my-1 text-lg;
+}
+
+nav a:hover {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a[target='_blank']::after {
+  content: '\02934';
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
+  vertical-align: text-top;
+  font-size: 82%;
+  transform: translate(0, 0) rotate(45deg);
+  transform-origin: bottom left;
+  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  text-decoration: none;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  pointer-events: none;
+}
+
+a[target='_blank']:hover::after {
+  text-decoration: none;
+  opacity: 1;
+  transform: translate(-20%, -40%) rotate(0deg);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.fade-greeting {
+  animation: fade-in 0.4s ease-in;
+}
+
+@tailwind components;
+@tailwind utilities;
