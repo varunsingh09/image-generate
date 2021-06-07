@@ -1,16 +1,9 @@
-<div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Assignment" />
-
-  &#xa0;
-
-  <!-- <a href="https://assignment.netlify.app">Demo</a> -->
-</div>
 
 <h1 align="center">Assignment</h1>
 
 <!-- Status -->
 
-<hr> -->
+<hr>
 
 <br>
 
